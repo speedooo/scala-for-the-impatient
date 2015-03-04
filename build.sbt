@@ -1,9 +1,9 @@
-libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0" % "test"
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
 
 lazy val commonSettings = Seq(
   organization := "com.github.cbismuth",
   version := "1.0.0-SNAPSHOT",
-  scalaVersion := "2.10.4"
+  scalaVersion := "2.11.5"
 )
 
 lazy val root = (project in file("."))
