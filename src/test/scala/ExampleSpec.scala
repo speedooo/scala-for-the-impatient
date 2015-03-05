@@ -10,7 +10,7 @@ class ExampleSpec extends FlatSpec with Matchers {
     stack.pop() should be(1)
   }
 
-  it should "throw NoSuchElementException if an empty stack is popped" in {
+  "An empty Stack" should "throw NoSuchElementException if an empty stack is popped" in {
     val emptyStack = new mutable.Stack[Int]
     a[NoSuchElementException] should be thrownBy {
       emptyStack.pop()
