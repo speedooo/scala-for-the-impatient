@@ -1,5 +1,3 @@
-libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
-
 lazy val commonSettings = Seq(
   organization := "com.github.cbismuth",
   version := "1.0.0-SNAPSHOT",
@@ -11,3 +9,14 @@ lazy val root = (project in file("."))
   .settings(
     name := "playground-scala"
   )
+
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
+
+import scalariform.formatter.preferences._
+
+scalariformSettings
+
+ScalariformKeys.preferences := ScalariformKeys.preferences.value
+  .setPreference(AlignSingleLineCaseStatements, true)
+  .setPreference(DoubleIndentClassDeclaration, true)
+  .setPreference(PreserveDanglingCloseParenthesis, true)
