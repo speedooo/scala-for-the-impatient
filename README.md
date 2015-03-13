@@ -11,3 +11,9 @@ Experiments are picked up from the great book: [Scala for the Impatient](http://
 ```
 ~ ;scalariformFormat ;test:scalariformFormat
 ```
+
+Or simply combine this with continuous testing:
+
+```
+~ test
+```
