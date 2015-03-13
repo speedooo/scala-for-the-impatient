@@ -10,6 +10,12 @@ class Ch03Ex02_ArraySwapComputerSpec extends FlatSpec with Matchers {
     actual.deep == expected.deep should be(right = true)
   }
 
+  "bubble swapping elements of Array(1)" should "be Array(1)" in {
+    val actual: Array[Int] = bubbleSwap(Array(1))
+    val expected: Array[Int] = Array(1)
+    actual.deep == expected.deep should be(right = true)
+  }
+
   "bubble swapping elements of Array(1, 2, 3, 4)" should "be Array(2, 1, 4, 3)" in {
     val actual: Array[Int] = bubbleSwap(Array(1, 2, 3, 4))
     val expected: Array[Int] = Array(2, 1, 4, 3)
