@@ -1,6 +1,6 @@
-# Scala Playground
+# Scala for the Impatient
 
-My pretty own playground to learn scala the pragmatic way.
+My pretty own playground to learn Scala the pragmatic way.
 
 Experiments are picked up from the great book: [Scala for the Impatient](http://typesafe.com/resources/e-book/scala-for-the-impatient).
 
