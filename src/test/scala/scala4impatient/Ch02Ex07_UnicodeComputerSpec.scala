@@ -1,6 +1,6 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
-import com.github.cbismuth.scala4impatient.Ch02Ex07_UnicodeComputer.unicodeProductWithoutLoop
+import scala4impatient.Ch02Ex07_UnicodeComputer.unicodeProductWithoutLoop
 import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch02Ex07_UnicodeComputer {

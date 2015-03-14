@@ -1,8 +1,8 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
 import java.lang.Math._
 
-import com.github.cbismuth.scala4impatient.Ch01Ex08_FilenameGenerator._
+import scala4impatient.Ch01Ex08_FilenameGenerator._
 import org.scalatest.{ FlatSpec, Matchers }
 
 import scala.util.Random

@@ -1,6 +1,6 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
-import com.github.cbismuth.scala4impatient.Ch02Ex05_CountdownComputer._
+import scala4impatient.Ch02Ex05_CountdownComputer._
 import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch02Ex05_CountdownComputer {

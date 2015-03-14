@@ -1,4 +1,4 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
 import scala.BigInt._
 import scala.util.Random

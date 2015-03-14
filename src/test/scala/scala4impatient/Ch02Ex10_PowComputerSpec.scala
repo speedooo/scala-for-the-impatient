@@ -1,6 +1,6 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
-import com.github.cbismuth.scala4impatient.Ch02Ex10_PowComputer._
+import scala4impatient.Ch02Ex10_PowComputer._
 import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch02Ex10_PowComputer {

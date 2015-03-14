@@ -1,7 +1,7 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
-import com.github.cbismuth.scala4impatient.Ch02Ex07_UnicodeComputer._
-import com.github.cbismuth.scala4impatient.Ch02Ex08_UnicodeComputer.product
+import scala4impatient.Ch02Ex07_UnicodeComputer._
+import scala4impatient.Ch02Ex08_UnicodeComputer.product
 import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch02Ex08_UnicodeComputer {

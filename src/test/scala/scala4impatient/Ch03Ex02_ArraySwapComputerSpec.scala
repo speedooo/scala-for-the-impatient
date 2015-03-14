@@ -1,6 +1,6 @@
-package com.github.cbismuth.scala4impatient
+package scala4impatient
 
-import com.github.cbismuth.scala4impatient.Ch03Ex02_ArraySwapComputer._
+import scala4impatient.Ch03Ex02_ArraySwapComputer._
 import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch03Ex02_ArraySwapComputer {
