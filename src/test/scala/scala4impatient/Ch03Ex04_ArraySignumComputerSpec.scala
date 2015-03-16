@@ -6,8 +6,8 @@ import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch03Ex04_ArraySignumComputer {
   def signumSwap(a: Array[Int]): Array[Int] = {
-    var positives: ArrayBuffer[Int] = ArrayBuffer[Int]()
-    var negatives: ArrayBuffer[Int] = ArrayBuffer[Int]()
+    var positives: ArrayBuffer[Int] = ArrayBuffer()
+    var negatives: ArrayBuffer[Int] = ArrayBuffer()
     for (e <- a) {
       if (e > 0) positives += e
       else negatives += e
