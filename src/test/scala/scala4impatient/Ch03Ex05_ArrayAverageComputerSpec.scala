@@ -12,23 +12,23 @@ object Ch03Ex05_ArrayAverageComputer {
 }
 
 class Ch03Ex05_ArrayAverageComputerSpec extends FlatSpec with Matchers {
-  "signum swapping elements of Array()" should "be Array()" in {
+  "signum swapping elements of Array()" should "be NaN" in {
     NaN.equals(avg(Array())) should be(right = true)
   }
 
-  "signum swapping elements of Array(1)" should "be Array(1)" in {
+  "signum swapping elements of Array(1)" should "be 1" in {
     val actual: Double = avg(Array(1))
     val expected: Double = 1
     actual should be(expected)
   }
 
-  "signum swapping elements of Array(1, -4, 3, -2)" should "be Array(1, 3, -4, -2)" in {
+  "signum swapping elements of Array(1, -4, 3, -2)" should "be -.5" in {
     val actual: Double = avg(Array(1, -4, 3, -2))
     val expected: Double = -.5
     actual should be(expected)
   }
 
-  "signum swapping elements of Array(1, -4, 3, -2, 0)" should "be Array(1, 3, -4, -2, 0)" in {
+  "signum swapping elements of Array(1, -4, 3, -2, 0)" should "be -.4" in {
     val actual: Double = avg(Array(1, -4, 3, -2, 0))
     val expected: Double = -.4
     actual should be(expected)
