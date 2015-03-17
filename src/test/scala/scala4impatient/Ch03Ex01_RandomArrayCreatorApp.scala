@@ -20,5 +20,7 @@ object Ch03Ex01_RandomArrayCreatorApp extends App {
     (for (i <- 0 until n) yield Random.nextInt(n)).toArray
   }
 
-  def printArray(a: Array[Int]) = a foreach (println(_))
+  def printArray(a: Array[Int]) {
+    a foreach (println(_))
+  }
 }
