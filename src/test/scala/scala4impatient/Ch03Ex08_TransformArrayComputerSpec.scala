@@ -17,25 +17,25 @@ object Ch03Ex08_TransformArrayComputer {
 }
 
 class Ch03Ex08_TransformArrayComputerSpec extends FlatSpec with Matchers {
-  "remove duplicate elements of Array()" should "be Array()" in {
+  "transformation of Array()" should "be Array()" in {
     val actual: Array[Int] = transform(Array())
     val expected: Array[Int] = Array()
     actual should be(expected)
   }
 
-  "remove duplicate elements of Array(1)" should "be Array(1)" in {
+  "transformation of Array(1)" should "be Array(1)" in {
     val actual: Array[Int] = transform(Array(1))
     val expected: Array[Int] = Array(1)
     actual should be(expected)
   }
 
-  "remove duplicate elements of Array(1, 2, 3, 4, 5)" should "be Array(1, 2, 3, 4, 5)" in {
+  "transformation of Array(1, 2, 3, 4, 5)" should "be Array(1, 2, 3, 4, 5)" in {
     val actual: Array[Int] = transform(Array(1, 2, 3, 4, 5))
     val expected: Array[Int] = Array(1, 2, 3, 4, 5)
     actual should be(expected)
   }
 
-  "remove duplicate elements of Array(1, -4, 1, -2, 3, -2)" should "be Array(1, -4, 1, 3)" in {
+  "transformation of Array(1, -4, 1, -2, 3, -2)" should "be Array(1, -4, 1, 3)" in {
     // initial      - Array(1, -4, 1, -2, 3, -2)
     // yield        - Array(1, 3, 5)
     // reverse      - Array(5, 3, 1)
