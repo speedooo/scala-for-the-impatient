@@ -16,7 +16,7 @@ object Ch03Ex09_TimeZoneStripper {
 }
 
 class Ch03Ex09_TimeZoneStripperSpec extends FlatSpec with Matchers {
-  "remove duplicate elements of Array()" should "be Array()" in {
+  "stripped american time zone identifiers" should "be listed below" in {
     val actual: Array[String] = strip()
     val expected: Array[String] = Array(
       "Adak",
