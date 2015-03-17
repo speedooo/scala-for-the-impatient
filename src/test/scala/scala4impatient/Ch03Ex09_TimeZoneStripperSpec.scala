@@ -5,9 +5,9 @@ import java.util.TimeZone
 import org.scalatest.{ FlatSpec, Matchers }
 
 import scala.util.Sorting.quickSort
-import scala4impatient.Ch03Ex09_TimeZoneStripperSpec._
+import scala4impatient.Ch03Ex09_TimeZoneStripper._
 
-object Ch03Ex09_TimeZoneStripperSpec {
+object Ch03Ex09_TimeZoneStripper {
   def strip(): Array[String] = {
     val availableIDsInUS: Array[String] = for (e <- TimeZone.getAvailableIDs if e.startsWith("America/")) yield e.replaceAll("^America/", "")
     quickSort(availableIDsInUS)
