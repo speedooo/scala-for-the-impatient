@@ -2,20 +2,17 @@ package scala4impatient
 
 import org.scalatest.{ FlatSpec, Matchers }
 
-import scala.collection.immutable.IndexedSeq
-import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable
 import scala4impatient.Ch03Ex08_TransformArrayComputer._
 
 object Ch03Ex08_TransformArrayComputer {
   def transform(a: Array[Int]): Array[Int] = {
-    if (a.length > 0) {
-      val b: ArrayBuffer[Int] = ArrayBuffer(a.clone(): _*)
-      val range: IndexedSeq[Int] = for (i <- 0 until b.length if b(i) < 0) yield i
-      for (k <- range.reverse.dropRight(1) if k < b.length) {
-        b.remove(k)
-      }
-      b.toArray
-    } else a
+    val b: mutable.Buffer[Int] = a.toBuffer
+    (for (i <- 0 until b.length if b(i) < 0) yield i)
+      .reverse
+      .dropRight(1)
+      .foreach(b.remove)
+    b.toArray
   }
 }
 
@@ -39,12 +36,12 @@ class Ch03Ex08_TransformArrayComputerSpec extends FlatSpec with Matchers {
   }
 
   "remove duplicate elements of Array(1, -4, 1, -2, 3, -2)" should "be Array(1, -4, 1, 3)" in {
-    // Array(1, -4, 1, -2, 3, -2)
-    // Array(1, 3, 5)
-    // Array(5, 3, 1)
-    // Array(5, 3)
-    // Array(1, -4, 1, -2, 3)
-    // Array(1, -4, 1, 3)
+    // initial      - Array(1, -4, 1, -2, 3, -2)
+    // yield        - Array(1, 3, 5)
+    // reverse      - Array(5, 3, 1)
+    // drop right   - Array(5, 3)
+    // a(5) removed - Array(1, -4, 1, -2, 3)
+    // a(3) removed - Array(1, -4, 1, 3)
     val actual: Array[Int] = transform(Array(1, -4, 1, -2, 3, -2))
     val expected: Array[Int] = Array(1, -4, 1, 3)
     actual should be(expected)
