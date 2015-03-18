@@ -13,7 +13,7 @@ object Ch04Ex02_WordCount {
       .toLowerCase
       .split("\\W+")
       .foreach(wc(_) += 1)
-    wc.toMap
+    wc
   }
 }
 
