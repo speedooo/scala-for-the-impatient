@@ -29,7 +29,7 @@ object Ch04Ex03_WordCountWithImmutableMap {
   }
 
   def wcWithGetOrElse(): Map[String, Int] = {
-    var wc: immutable.Map[String, Int] = immutable.Map[String, Int]() withDefault (_ => 0)
+    var wc: immutable.Map[String, Int] = immutable.Map[String, Int]()
     Source.fromFile("src/test/scala/scala4impatient/Ch04Ex02_WordCount.txt", "UTF-8")
       .mkString
       .toLowerCase

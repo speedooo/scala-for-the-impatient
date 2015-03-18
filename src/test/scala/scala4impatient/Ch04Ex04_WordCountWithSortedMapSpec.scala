@@ -8,7 +8,7 @@ import scala4impatient.Ch04Ex04_WordCountWithSortedMap._
 
 object Ch04Ex04_WordCountWithSortedMap {
   def wc(): Map[String, Int] = {
-    var wc: immutable.Map[String, Int] = immutable.SortedMap[String, Int]() withDefault (_ => 0)
+    var wc: immutable.Map[String, Int] = immutable.SortedMap[String, Int]()
     Source.fromFile("src/test/scala/scala4impatient/Ch04Ex02_WordCount.txt", "UTF-8")
       .mkString
       .toLowerCase
