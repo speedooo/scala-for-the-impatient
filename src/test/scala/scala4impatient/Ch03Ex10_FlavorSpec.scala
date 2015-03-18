@@ -8,6 +8,7 @@ import org.scalatest.{ FlatSpec, Matchers }
 
 import scala.collection.JavaConversions.asScalaBuffer
 import scala.collection.mutable
+import scala.util.Sorting.quickSort
 import scala4impatient.Ch03Ex10_Flavor._
 
 object Ch03Ex10_Flavor {
@@ -29,6 +30,8 @@ class Ch03Ex10_FlavorSpec extends FlatSpec with Matchers {
       "PNG",
       "JFIF"
     )
+    quickSort(actual)
+    quickSort(expected)
     actual.deep == expected.deep should be(right = true)
   }
 }
