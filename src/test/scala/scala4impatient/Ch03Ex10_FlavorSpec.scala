@@ -22,14 +22,23 @@ object Ch03Ex10_Flavor {
 class Ch03Ex10_FlavorSpec extends FlatSpec with Matchers {
   "native image flavor identifiers" should "be listed below" in {
     val actual: Array[String] = nativesForFlavor().toArray
-    val expected: Array[String] = Array(
-      "image/jpeg",
-      "image/png",
-      "image/x-png",
-      "image/gif",
-      "PNG",
-      "JFIF"
-    )
+    var expected: Array[String] = Array()
+    if (System.getProperty("os.name").contains("Linux")) {
+      expected = Array(
+        "image/jpeg",
+        "image/png",
+        "image/x-png",
+        "image/gif",
+        "PNG",
+        "JFIF"
+      )
+    } else if (System.getProperty("os.name").contains("Mac")) {
+      expected = Array(
+        "PNG",
+        "JFIF",
+        "TIFF"
+      )
+    }
     quickSort(actual)
     quickSort(expected)
     actual.deep == expected.deep should be(right = true)
