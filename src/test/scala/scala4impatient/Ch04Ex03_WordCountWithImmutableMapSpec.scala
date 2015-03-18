@@ -37,7 +37,6 @@ object Ch04Ex03_WordCountWithImmutableMap {
       .foreach(e => wc = wc + (e -> (wc.getOrElse(e, 0) + 1)))
     wc
   }
-
 }
 
 class Ch04Ex03_WordCountWithImmutableMapSpec extends FlatSpec with Matchers {

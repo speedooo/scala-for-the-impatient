@@ -19,7 +19,6 @@ object Ch04Ex06_WeekdaysInLinkedHashMap {
       "SUNDAY" -> SUNDAY
     )
   }
-
 }
 
 class Ch04Ex06_WeekdaysInLinkedHashMapSpec extends FlatSpec with Matchers {

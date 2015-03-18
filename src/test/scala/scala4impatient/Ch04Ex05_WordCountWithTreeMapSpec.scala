@@ -18,7 +18,6 @@ object Ch04Ex05_WordCountWithTreeMap {
       .foreach(e => wc = wc + (e -> (wc.getOrElse(e, 0) + 1)))
     wc
   }
-
 }
 
 class Ch04Ex05_WordCountWithTreeMapSpec extends FlatSpec with Matchers {

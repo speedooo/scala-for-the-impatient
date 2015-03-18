@@ -16,7 +16,6 @@ object Ch04Ex04_WordCountWithSortedMap {
       .foreach(e => wc = wc + (e -> (wc.getOrElse(e, 0) + 1)))
     wc
   }
-
 }
 
 class Ch04Ex04_WordCountWithSortedMapSpec extends FlatSpec with Matchers {
