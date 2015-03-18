@@ -5,10 +5,17 @@ import scala.collection._
 
 object Ch04Ex07_SystemPropertiesPrinterApp extends App {
   val props: Map[String, String] = System.getProperties
-  val max: Int = props
+  var max: Int = 0
+  // reduce style
+  max = props
     .keys
     .reduceLeft((x, y) => if (x.length > y.length) x else y)
     .length
+  // map style
+  max = props
+    .keys
+    .map(_.length)
+    .max
   props
     .toMap
     .transform((k, v) => Tuple3(k, v, max - k.length))
