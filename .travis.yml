@@ -9,13 +9,11 @@ script:
 
 sudo: false
 
-# Cache settings
 cache:
   directories:
     - $HOME/.ivy2/cache
     - $HOME/.sbt/launchers
 
-# whitelist
 branches:
   only:
     - master
