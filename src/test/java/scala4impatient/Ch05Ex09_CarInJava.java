@@ -4,7 +4,7 @@ public class Ch05Ex09_CarInJava {
     private final String manufacturer;
     private final String modelName;
     private int modelYear = -1;
-    private String licencePlate = "";
+    private String licensePlate = "";
 
     public Ch05Ex09_CarInJava(String manufacturer, String modelName) {
         this.manufacturer = manufacturer;
@@ -16,14 +16,14 @@ public class Ch05Ex09_CarInJava {
         this.modelYear = modelYear;
     }
 
-    public Ch05Ex09_CarInJava(String manufacturer, String modelName, String licencePlate) {
+    public Ch05Ex09_CarInJava(String manufacturer, String modelName, String licensePlate) {
         this(manufacturer, modelName);
-        this.licencePlate = licencePlate;
+        this.licensePlate = licensePlate;
     }
 
-    public Ch05Ex09_CarInJava(String manufacturer, String modelName, int modelYear, String licencePlate) {
+    public Ch05Ex09_CarInJava(String manufacturer, String modelName, int modelYear, String licensePlate) {
         this(manufacturer, modelName, modelYear);
-        this.licencePlate = licencePlate;
+        this.licensePlate = licensePlate;
     }
 
     public String getManufacturer() {
@@ -42,11 +42,11 @@ public class Ch05Ex09_CarInJava {
         this.modelYear = modelYear;
     }
 
-    public String getLicencePlate() {
-        return licencePlate;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setLicencePlate(String licencePlate) {
-        this.licencePlate = licencePlate;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 }
