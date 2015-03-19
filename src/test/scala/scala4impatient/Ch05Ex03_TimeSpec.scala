@@ -14,7 +14,7 @@ class Ch05Ex03_Time() {
 
   def this(hrs: Int, min: Int) {
     this()
-    if (hrs < 0 || hrs > 23 || min < 0 || min > 60) throw new IllegalArgumentException
+    if (hrs < 0 || hrs > 23 || min < 0 || min > 59) throw new IllegalArgumentException
     _hrs = hrs
     _min = min
   }
