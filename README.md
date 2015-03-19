@@ -1,4 +1,4 @@
-# Scala for the Impatient
+# Scala for the Impatient [![Build Status](https://api.travis-ci.org/cbismuth/scala-for-the-impatient.svg?branch=master)](https://travis-ci.org/cbismuth/scala-for-the-impatient)
 
 My pretty own playground to learn Scala the pragmatic way.
 
