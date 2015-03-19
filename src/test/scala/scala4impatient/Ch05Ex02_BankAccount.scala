@@ -1,11 +1,11 @@
 package scala4impatient
 
 object Ch05Ex02_BankAccount {
-  def apply(): Unit = {
+  def apply(): Ch05Ex02_BankAccount = {
     new Ch05Ex02_BankAccount()
   }
 
-  def apply(amount: Double): Unit = {
+  def apply(amount: Double): Ch05Ex02_BankAccount = {
     new Ch05Ex02_BankAccount(amount)
   }
 }

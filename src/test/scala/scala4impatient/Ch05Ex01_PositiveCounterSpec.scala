@@ -3,7 +3,7 @@ package scala4impatient
 import org.scalatest.{ FlatSpec, Matchers }
 
 object Ch05Ex01_PositiveCounter {
-  def apply(count: Int) = {
+  def apply(count: Int): Ch05Ex01_PositiveCounter = {
     new Ch05Ex01_PositiveCounter(count)
   }
 }
