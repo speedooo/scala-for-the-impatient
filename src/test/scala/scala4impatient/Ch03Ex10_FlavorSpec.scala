@@ -41,6 +41,8 @@ class Ch03Ex10_FlavorSpec extends FlatSpec with Matchers {
     }
     quickSort(actual)
     quickSort(expected)
+    println(System.getProperty("os.name"))
+    actual.foreach(println)
     actual.deep == expected.deep should be(right = true)
   }
 }
