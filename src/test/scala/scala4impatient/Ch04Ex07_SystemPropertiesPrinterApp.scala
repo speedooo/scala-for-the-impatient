@@ -21,5 +21,5 @@ object Ch04Ex07_SystemPropertiesPrinterApp extends App {
     .transform((k, v) => Tuple3(k, v, max - k.length))
     .values
     .toList
-    .foreach(t => println("%s%s | %s".format(t._1, " " * t._3, t._2)))
+    .foreach(t => println(s"${t._1}${" " * t._3} | ${t._2}"))
 }
