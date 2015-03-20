@@ -12,7 +12,7 @@ object Ch06Ex07_SuitsWithRedCheck extends Enumeration {
   def isRed(suits: Ch06Ex07_SuitsWithRedCheck): Boolean = HEART == suits || DIAMOND == suits
 }
 
-class Ch06Ex07_SuitsWithRedCheckWithRedCheckWithRedCheckSpec extends FlatSpec with Matchers {
+class Ch06Ex07_SuitsWithRedCheckSpec extends FlatSpec with Matchers {
   "heart and diamond only" should "be red" in {
     Ch06Ex07_SuitsWithRedCheck.isRed(Ch06Ex07_SuitsWithRedCheck.HEART) should be(right = true)
     Ch06Ex07_SuitsWithRedCheck.isRed(Ch06Ex07_SuitsWithRedCheck.DIAMOND) should be(right = true)
