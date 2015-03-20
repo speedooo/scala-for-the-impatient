@@ -36,6 +36,6 @@ class Ch05Ex08_CarTheHardWay() {
   def modelYear: Int = _modelYear
   def licensePlate: String = _licensePlate
 
-  def modelYear_=(modelYear: Int) { _modelYear = modelYear }
-  def licensePlate_=(licensePlate: String) { _licensePlate = licensePlate }
+  def modelYear_=(modelYear: Int): Unit = { _modelYear = modelYear }
+  def licensePlate_=(licensePlate: String): Unit = { _licensePlate = licensePlate }
 }
