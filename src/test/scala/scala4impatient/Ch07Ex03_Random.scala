@@ -28,9 +28,7 @@ package object random {
     seed
   }
 
-  def nextDouble(): Double = {
-    1 / nextInt()
-  }
+  def nextDouble(): Double = 1 / nextInt()
 
   def setSeed(value: Int): Unit = {
     seed = value
