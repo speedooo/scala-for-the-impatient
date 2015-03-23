@@ -15,8 +15,6 @@
  * limitations under the License.
  */
 
-package scala4impatient
-
 package com {
   object Com {
     // NOP
