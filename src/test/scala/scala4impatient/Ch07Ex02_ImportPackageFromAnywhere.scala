@@ -16,14 +16,14 @@
  */
 
 package com {
-  object Com {
+  object Ch07Ex02_ObjectToImportFromAnywhere {
     // NOP
   }
 }
 
 package scala4impatient {
   object Ch07Ex02_ImportPackageFromAnywhere {
-    import com.Com
-    Com.toString
+    import com.Ch07Ex02_ObjectToImportFromAnywhere
+    Ch07Ex02_ObjectToImportFromAnywhere.toString
   }
 }
