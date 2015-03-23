@@ -22,7 +22,7 @@ package com {
 }
 
 package scala4impatient {
-  class Ch07Ex02_ImportPackageFromAnywhere {
+  object Ch07Ex02_ImportPackageFromAnywhere {
     import com.Com
     Com.toString
   }
