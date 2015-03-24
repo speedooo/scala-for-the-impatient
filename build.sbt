@@ -7,7 +7,7 @@ lazy val commonSettings = Seq(
 lazy val root = (project in file("."))
   .settings(commonSettings: _*)
   .settings(
-    name := "playground-scala"
+    name := "scala-for-the-impatient"
   )
 
 libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
