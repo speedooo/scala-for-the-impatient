@@ -24,7 +24,6 @@ package com {
 package scala4impatient.chapter07 {
   object Ch07Ex02_ImportPackageFromAnywhere {
     import com.Ch07Ex02_ObjectToImportFromAnywhere
-
     Ch07Ex02_ObjectToImportFromAnywhere.toString
   }
 }
