@@ -18,6 +18,7 @@
 package scala4impatient.chapter08
 
 class Ch08Ex03_Point(val x: Double, val y: Double) {
+  // NOP
 }
 
 abstract class Ch08Ex03_ShapeSpec {
