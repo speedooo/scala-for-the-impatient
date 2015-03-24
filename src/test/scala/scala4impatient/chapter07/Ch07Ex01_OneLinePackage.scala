@@ -36,15 +36,13 @@ package com {
 package com.horstmann.impatient {
   object ComHorstmannImpatient {
     Impatient.toString
+
     // can't make any reference to object from parent package Com (without importing it)
-
     import com.Com
-
     Com.toString
+
     // can't make any reference to object from parent package Horstmann (without importing it)
-
     import com.horstmann.Horstmann
-
     Horstmann.toString
   }
 }
