@@ -18,4 +18,5 @@
 package scala4impatient.chapter08
 
 class Ch08Ex07_Square(x: Int = 0, y: Int = 0, width: Int = 0) extends java.awt.Rectangle(x, y, width, width) {
+  // NOP
 }
