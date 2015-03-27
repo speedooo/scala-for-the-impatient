@@ -23,26 +23,17 @@ import org.scalatest.{ FlatSpec, Matchers }
 
 import scala.io.Source
 import scala4impatient.chapter09.Ch09Ex01_TextFileReverse._
+import scala4impatient.chapter09.util.UnsafeStringOps
+import scala4impatient.chapter09.util.UnsafeStringOps._
 
 object Ch09Ex01_TextFileReverse {
-  /**
-   * Reverses input text file content into output text file.
-   * Caution: resources are not safely closed.
-   * @param inputFilename input filename
-   * @param outputFilename output filename
-   * @param encoding encoding (e.g. "UTF-8")
-   */
-  def reverseTextFile(inputFilename: String, outputFilename: String, encoding: String): Unit = {
-    val outputFile: File = new File(outputFilename)
-    val bw: BufferedWriter = new BufferedWriter(new FileWriter(outputFile))
-    bw.write(
-      Source.fromFile(inputFilename, encoding)
-        .getLines()
-        .toList
-        .reverse
-        .mkString(System.getProperty("line.separator"))
-    )
-    bw.close()
+  def reverseTextFile(inputFilename: String, outputFilename: String): Unit = {
+    val string: String = Source.fromFile(inputFilename)
+      .getLines()
+      .toList
+      .reverse
+      .mkString(System.getProperty("line.separator"))
+    string2file(string, outputFilename)
   }
 }
 
@@ -50,19 +41,18 @@ class Ch09Ex01_TextFileReverseSpec extends FlatSpec with Matchers {
   "text file" should "be reversed" in {
     // can't deal with original text file as eol are stripped
     val inputFilename: String = "src/test/resources/lorem-ipsum.txt"
-    val encoding: String = "UTF-8"
 
     val outputFilename1: String = File.createTempFile("scala4impatient", "Ch09Ex01").getAbsolutePath
-    reverseTextFile(inputFilename, outputFilename1, encoding)
-    val reversed1: String = Source.fromFile(outputFilename1, encoding).mkString
+    reverseTextFile(inputFilename, outputFilename1)
+    val reversed1: String = file2string(outputFilename1)
 
     val outputFilename2: String = File.createTempFile("scala4impatient", "Ch09Ex01").getAbsolutePath
-    reverseTextFile(outputFilename1, outputFilename2, encoding)
-    val reversed2: String = Source.fromFile(outputFilename2, encoding).mkString
+    reverseTextFile(outputFilename1, outputFilename2)
+    val reversed2: String = file2string(outputFilename2)
 
     val outputFilename3: String = File.createTempFile("scala4impatient", "Ch09Ex01").getAbsolutePath
-    reverseTextFile(outputFilename2, outputFilename3, encoding)
-    val reversed3: String = Source.fromFile(outputFilename3, encoding).mkString
+    reverseTextFile(outputFilename2, outputFilename3)
+    val reversed3: String = file2string(outputFilename3)
 
     reversed1 shouldNot be(reversed2)
     reversed1 should be(reversed3)

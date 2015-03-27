@@ -15,25 +15,21 @@
  * limitations under the License.
  */
 
-package scala4impatient.chapter09
+package scala4impatient.chapter09.util
 
-import org.scalatest.{ FlatSpec, Matchers }
+import java.io.{ BufferedWriter, File, FileWriter }
 
 import scala.io.Source
-import scala4impatient.chapter09.Ch09Ex03_LongWordFinder._
 
-object Ch09Ex03_LongWordFinder {
-  def findLongWords(inputFilename: String, encoding: String = "UTF-8"): Int = {
-    Source.fromFile(inputFilename)
-      .mkString
-      .split("[^a-zA-Z]+")
-      .count(_.length > 11)
+object UnsafeStringOps {
+  def string2file(string: String, filename: String, encoding: String = "UTF-8"): Unit = {
+    val outputFile: File = new File(filename)
+    val bw: BufferedWriter = new BufferedWriter(new FileWriter(outputFile))
+    bw.write(string)
+    bw.close()
   }
-}
 
-class Ch09Ex03_LongWordFinderSpec extends FlatSpec with Matchers {
-  "long words" should "should be found" in {
-    // find [a-zA-Z]{12,} with a text editor
-    findLongWords("src/test/resources/lorem-ipsum.txt") should be(126)
+  def file2string(filename: String, encoding: String = "UTF-8"): String = {
+    Source.fromFile(filename, encoding).mkString
   }
 }
