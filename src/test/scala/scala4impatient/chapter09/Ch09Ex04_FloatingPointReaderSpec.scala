@@ -44,18 +44,18 @@ object Ch09Ex04_FloatingPointReader {
 
 class Ch09Ex04_FloatingPointReaderSpec extends FlatSpec with Matchers {
   "floating point values" should "be SUM" in {
-    (sum("src/test/resources/floating-point-values.txt") - 56.38345).abs < 0.001 should be(right = true)
+    (sum("src/test/resources/Ch09Ex04_FloatingPointReaderSpec.txt") - 56.38345).abs < 0.001 should be(right = true)
   }
 
   "floating point values" should "be AVG" in {
-    (avg("src/test/resources/floating-point-values.txt") - 56.38345 / 5).abs < 0.001 should be(right = true)
+    (avg("src/test/resources/Ch09Ex04_FloatingPointReaderSpec.txt") - 56.38345 / 5).abs < 0.001 should be(right = true)
   }
 
   "floating point values" should "be MIN" in {
-    (min("src/test/resources/floating-point-values.txt") - 0.12345).abs < 0.001 should be(right = true)
+    (min("src/test/resources/Ch09Ex04_FloatingPointReaderSpec.txt") - 0.12345).abs < 0.001 should be(right = true)
   }
 
   "floating point values" should "be MAX" in {
-    (max("src/test/resources/floating-point-values.txt") - 42).abs < 0.001 should be(right = true)
+    (max("src/test/resources/Ch09Ex04_FloatingPointReaderSpec.txt") - 42).abs < 0.001 should be(right = true)
   }
 }
