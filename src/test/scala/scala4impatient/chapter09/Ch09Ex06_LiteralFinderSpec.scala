@@ -47,7 +47,11 @@ object Ch09Ex06_LiteralFinder {
 class Ch09Ex06_LiteralFinderSpec extends FlatSpec with Matchers {
   "literals" should "be found" in {
     val actual: Array[String] = findLiterals("src/test/resources/Ch09Ex06_LiteralFinderSpec.txt")
-    val expected: Array[String] = Array(""""test2"""", """"test\" 5"""", """"test \\" 8"""")
+    val expected: Array[String] = Array(
+      """"test2"""",
+      """"test\" 5"""",
+      """"test \\" 8""""
+    )
     actual.deep == expected.deep should be(right = true)
   }
 }
