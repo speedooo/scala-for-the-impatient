@@ -35,11 +35,10 @@ object Ch09Ex06_LiteralFinder {
     Source
       .fromFile(filename, "UTF-8")
       .getLines()
-      .foreach(
-        """"([^"\\]*([\\]+"[^"\\]*)*)"""".r.findFirstIn(_) match {
-          case Some(s: String) => literals += s
-          case None            => // NOP
-        })
+      .foreach(""""([^"\\]*([\\]+"[^"\\]*)*)"""".r.findFirstIn(_) match {
+        case Some(s: String) => literals += s
+        case None            => // NOP
+      })
 
     literals.toArray
   }
