@@ -61,4 +61,3 @@ class Ch08Ex06_ShapeSpec extends FlatSpec with Matchers {
     new Ch08Ex06_Circle(Ch08Ex06_Point(1, 2), 4.5).centerPoint should be(Ch08Ex06_Point(1, 2))
   }
 }
-
