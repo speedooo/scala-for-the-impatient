@@ -43,7 +43,7 @@ object Ch09Ex07_FloatingPointLiteralFinder {
 }
 
 class Ch09Ex07_FloatingPointLiteralFinderSpec extends FlatSpec with Matchers {
-  "literals" should "be found" in {
+  "floating-point literals" should "be found" in {
     val actual: Array[String] = findFloatingPointLiterals("src/test/resources/Ch09Ex07_FloatingPointLiteralFinderSpec.txt")
     val expected: Array[String] = Array(
       "azerty1",
