@@ -19,20 +19,23 @@ package scala4impatient.chapter10
 
 import java.io.{ BufferedInputStream, FileInputStream }
 
+import org.scalatest.{ FlatSpec, Matchers }
+
 trait Ch10Ex08_BufferedInputStreamTrait {
   this: FileInputStream =>
+
   val delegate: BufferedInputStream = new BufferedInputStream(this)
 
-  def available(): Int = delegate.available()
+  override def read(b: Array[Byte]): Int = delegate.read(b)
+}
 
-  def read(): Int = delegate.read()
-  def read(b: Array[Byte]): Int = delegate.read(b)
-  def read(b: Array[Byte], off: Int, len: Int): Int = delegate.read(b, off, len)
-  def skip(n: Long): Long = delegate.skip(n)
-  def reset(): Unit = delegate.reset()
+class Ch10Ex08_BufferedInputStreamTraitSpec extends FlatSpec with Matchers {
+  "file" should "be read with buffer" in {
+    val buffered: Ch10Ex08_BufferedInputStreamTrait = new FileInputStream("src/test/resources/lorem-ipsum.txt") with Ch10Ex08_BufferedInputStreamTrait
 
-  def mark(readlimit: Int): Unit = delegate.mark(readlimit)
-  def markSupported(): Boolean = delegate.markSupported()
+    val bytes: Array[Byte] = new Array[Byte](1024)
+    buffered.read(bytes)
 
-  def close(): Unit = delegate.close()
+    new String(bytes).startsWith("Lorem ipsum dolor sit amet") should be(right = true)
+  }
 }
