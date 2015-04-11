@@ -23,14 +23,14 @@ import java.beans.{ PropertyChangeEvent, PropertyChangeListener, PropertyChangeS
 import org.scalatest.{ FlatSpec, Matchers }
 
 trait Ch10Ex05_PropertyChangeSupport {
-  val support: PropertyChangeSupport = new PropertyChangeSupport(this)
+  val delegate: PropertyChangeSupport = new PropertyChangeSupport(this)
 
   def addPropertyChangeListener(propertyName: String, listener: PropertyChangeListener): Unit = {
-    support.addPropertyChangeListener(propertyName, listener)
+    delegate.addPropertyChangeListener(propertyName, listener)
   }
 
   def firePropertyChange(event: PropertyChangeEvent): Unit = {
-    support.firePropertyChange(event)
+    delegate.firePropertyChange(event)
   }
 }
 
