@@ -19,7 +19,7 @@ package scala4impatient.chapter10
 
 import java.io.{ BufferedInputStream, FileInputStream }
 
-class Ch10Ex08_BufferedInputStreamTrait {
+trait Ch10Ex08_BufferedInputStreamTrait {
   this: FileInputStream =>
   val delegate: BufferedInputStream = new BufferedInputStream(this)
 
