@@ -32,12 +32,19 @@ trait Ch10Ex08_BufferedInputStreamTrait {
 class Ch10Ex08_BufferedInputStreamTraitSpec extends FlatSpec with Matchers {
   "file" should "be read with buffer" in {
     val filename: String = "src/test/resources/lorem-ipsum.txt"
+
+    // format: OFF
     val buffered: Ch10Ex08_BufferedInputStreamTrait = new FileInputStream(filename)
       with Ch10Ex08_BufferedInputStreamTrait
+    // format: ON
 
     val bytes: Array[Byte] = new Array[Byte](1024)
     buffered.read(bytes)
 
-    new String(bytes).startsWith("Lorem ipsum dolor sit amet") should be(right = true)
+    val expectation: Boolean = new Predef.String(bytes)
+      .toLowerCase
+      .startsWith("lorem ipsum dolor sit amet")
+
+    expectation should be(right = true)
   }
 }
