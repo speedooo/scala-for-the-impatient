@@ -40,7 +40,7 @@ trait Ch10Ex09_ShortLoggerTrait extends Ch10Ex09_LoggerTrait {
   abstract override def log(msg: String): Unit = super.log(s"${msg.substring(0, maxLength)}")
 }
 
-class Ch10Ex09_BufferedInputStreamWithLoggerTrait extends FlatSpec with Matchers {
+class Ch10Ex09_BufferedInputStreamWithLoggerTraitSpec extends FlatSpec with Matchers {
   "file" should "be read with logged buffer" in {
     val filename: String = "src/test/resources/lorem-ipsum.txt"
 
