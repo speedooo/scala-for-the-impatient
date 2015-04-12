@@ -21,6 +21,8 @@ import java.io.{FileInputStream, InputStream}
 
 import org.scalatest.{FlatSpec, Matchers}
 
+// @BasileDuPlessis - delegation pattern credits
+
 class Ch10Ex10_IterableInputStream(val delegate: InputStream) extends InputStream with Iterable[Byte] {
   override def iterator: Iterator[Byte] = new Iterator[Byte] {
     override def hasNext: Boolean = delegate.available() > 0

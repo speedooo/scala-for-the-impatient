@@ -21,6 +21,8 @@ import java.io.{ BufferedInputStream, FileInputStream }
 
 import org.scalatest.{ FlatSpec, Matchers }
 
+// @BasileDuPlessis - delegation pattern credits
+
 trait Ch10Ex08_BufferedInputStreamTrait {
   this: FileInputStream =>
 

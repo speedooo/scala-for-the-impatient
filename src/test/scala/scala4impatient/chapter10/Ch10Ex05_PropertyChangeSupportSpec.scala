@@ -22,6 +22,8 @@ import java.beans.{ PropertyChangeEvent, PropertyChangeListener, PropertyChangeS
 
 import org.scalatest.{ FlatSpec, Matchers }
 
+// @BasileDuPlessis - delegation pattern credits
+
 trait Ch10Ex05_PropertyChangeSupport {
   val delegate: PropertyChangeSupport = new PropertyChangeSupport(this)
 
